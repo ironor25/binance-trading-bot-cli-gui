@@ -1,0 +1,8 @@
+binance
+python-binance
+pydantic
+python-dotenv
+fastapi
+argparse
+logging
+uvicorn

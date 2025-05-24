@@ -1,0 +1,15 @@
+# Node.js dependencies
+/frontend/node_modules/
+
+# Python virtual environments
+/backend/venv/
+/backend/env/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# VSCode settings (optional)
+.vscode/
