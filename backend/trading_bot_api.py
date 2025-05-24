@@ -30,8 +30,6 @@ class Order(BaseModel):
     price: float = None
     stop_price: float = None
 
-class PriceRequest(BaseModel):
-    symbol: str
 
 @app.get("/price")
 def get_price(data: str):
