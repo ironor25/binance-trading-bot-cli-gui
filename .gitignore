@@ -3,7 +3,7 @@
 
 # Python virtual environments
 /backend/venv/
-/backend/env/
+.env/
 
 # Python cache
 __pycache__/
