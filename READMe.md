@@ -7,6 +7,8 @@ This project provides both a **CLI interface** and a **full-stack GUI** for trad
 ## 1. CLI Interface (Command Line)
 
 The CLI lets you place futures orders directly from your terminal. It uses the `trading_bot.py` script.
+### Note: 
+To use CLI Interface first complete installation.
 
 ### Usage
 
