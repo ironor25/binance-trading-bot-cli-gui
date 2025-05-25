@@ -6,7 +6,7 @@ This project provides both a **CLI interface** and a **full-stack GUI** for trad
 
 ## 1. CLI Interface (Command Line)
 
-The CLI lets you place futures orders directly from your terminal. It uses the `trading_bot.py` script.
+The CLI lets you place futures orders directly from your terminal. It uses the `trading_bot_cli.py` script.
 
 ### Note:
 
@@ -15,7 +15,7 @@ To use CLI Interface first complete installation.
 ### Usage
 
 ```bash
-python trading_bot.py --symbol BTCUSDT --side BUY --quantity 0.01 --type LIMIT --price 65000
+python trading_bot_cli.py --symbol BTCUSDT --side BUY --quantity 0.01 --type LIMIT --price 65000
 ```
 
 **Arguments:**
@@ -32,13 +32,13 @@ python trading_bot.py --symbol BTCUSDT --side BUY --quantity 0.01 --type LIMIT -
 Place a market order:
 
 ```bash
-python trading_bot.py --symbol BTCUSDT --side BUY --quantity 0.01 --type MARKET
+python trading_bot_cli.py --symbol BTCUSDT --side BUY --quantity 0.01 --type MARKET
 ```
 
 Place a stop-limit order:
 
 ```bash
-python trading_bot.py --symbol BTCUSDT --side SELL --quantity 0.01 --type STOP --price 64000 --stop_price 63900
+python trading_bot_cli.py --symbol BTCUSDT --side SELL --quantity 0.01 --type STOP --price 64000 --stop_price 63900
 ```
 
 ---
