@@ -7,7 +7,9 @@ This project provides both a **CLI interface** and a **full-stack GUI** for trad
 ## 1. CLI Interface (Command Line)
 
 The CLI lets you place futures orders directly from your terminal. It uses the `trading_bot.py` script.
-### Note: 
+
+### Note:
+
 To use CLI Interface first complete installation.
 
 ### Usage
@@ -58,15 +60,24 @@ The GUI is a modern React app with a FastAPI backend. It allows you to place ord
 
 ### Backend (FastAPI)
 
-1. **Install dependencies:**
+1. **(Recommended) Create a virtual environment**  
+   This helps avoid library version conflicts:
    ```bash
    cd backend
+   python -m venv venv
+   # On Windows:
+   venv\Scripts\activate
+   # On macOS/Linux:
+   source venv/bin/activate
+   ```
+2. **Install dependencies:**
+   ```bash
    pip install -r requirements.txt
    ```
-2. **Set up your Binance API keys:**
+3. **Set up your Binance API keys:**
    - Copy `.env.example` to `.env` and fill in your API_KEY and SECRET_PHRASE_KEY.
    - Or edit `.env` directly.
-3. **Run the FastAPI server:**
+4. **Run the FastAPI server:**
    ```bash
    uvicorn trading_bot_api:app --reload
    ```
