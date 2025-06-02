@@ -26,7 +26,7 @@ function App() {
   const [error, setError] = useState(null);
   const [marketPrice, setMarketPrice] = useState(null);
   const [glow, setGlow] = useState(false);
-
+  const link = "https://binancebotbackend-production.up.railway.app"
   // helpers for showing price/stop fields
   const showPrice = orderType === 'LIMIT' || orderType === 'STOP';
   const showStopPrice = orderType === 'STOP';
@@ -50,7 +50,7 @@ function App() {
       order.stop_price = stopPrice ? parseFloat(stopPrice) : undefined;
     }
 
-    axios.post('http://localhost:8000/place-order', order, {
+    axios.post(`${link}/place-order`, order, {
       headers: { 'Content-Type': 'application/json' }
     })
       .then(res => {
@@ -73,7 +73,7 @@ function App() {
     let prevPrice = null;
     const fetchPrice = async () => {
       try {
-        const response = await axios.get("http://127.0.0.1:8000/price", { params: { data: symbol } });
+        const response = await axios.get(`${link}/price`, { params: { data: symbol } });
         const newPrice = response.data.price;
         setMarketPrice(prev => {
           if (prev !== null && parseFloat(prev) !== parseFloat(newPrice)) {
